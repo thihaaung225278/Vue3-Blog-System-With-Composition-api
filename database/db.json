@@ -1,0 +1,39 @@
+{
+    "posts":[
+        {
+            "id":1, 
+            "title": "PHP",
+            "body": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam recusandae voluptatum error iste quas quibusdam, nostrum eos atque nisi eveniet hic asperiores quam quos nam tempora iusto explicabo dignissimos. Sint, doloribus nemo! Explicabo ullam expedita, quia dignissimos iusto culpa, nobis iure reprehenderit quidem quod repudiandae, enim adipisci. Itaque, laudantium corporis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam recusandae voluptatum error iste quas quibusdam, nostrum eos atque nisi eveniet hic asperiores quam quos nam tempora iusto explicabo dignissimos. Sint, doloribus nemo! Explicabo ullam expedita, quia dignissimos iusto culpa, nobis iure reprehenderit quidem quod repudiandae, enim adipisci. Itaque, laudantium corporis?"
+        },
+        {
+            "id":2, 
+            "title": "Laravel",
+            "body": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam recusandae voluptatum error iste quas quibusdam, nostrum eos atque nisi eveniet hic asperiores quam quos nam tempora iusto explicabo dignissimos. Sint, doloribus nemo! Explicabo ullam expedita, quia dignissimos iusto culpa, nobis iure reprehenderit quidem quod repudiandae, enim adipisci. Itaque, laudantium corporis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam recusandae voluptatum error iste quas quibusdam, nostrum eos atque nisi eveniet hic asperiores quam quos nam tempora iusto explicabo dignissimos. Sint, doloribus nemo! Explicabo ullam expedita, quia dignissimos iusto culpa, nobis iure reprehenderit quidem quod repudiandae, enim adipisci. Itaque, laudantium corporis?"
+        },
+        {
+            "id":3, 
+            "title": "Wordpress",
+            "body": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam recusandae voluptatum error iste quas quibusdam, nostrum eos atque nisi eveniet hic asperiores quam quos nam tempora iusto explicabo dignissimos. Sint, doloribus nemo! Explicabo ullam expedita, quia dignissimos iusto culpa, nobis iure reprehenderit quidem quod repudiandae, enim adipisci. Itaque, laudantium corporis?"
+        },
+        {
+            "id":4, 
+            "title": "Javascript",
+            "body": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam recusandae voluptatum error iste quas quibusdam, nostrum eos atque nisi eveniet hic asperiores quam quos nam tempora iusto explicabo dignissimos. Sint, doloribus nemo! Explicabo ullam expedita, quia dignissimos iusto culpa, nobis iure reprehenderit quidem quod repudiandae, enim adipisci. Itaque, laudantium corporis?"
+        },
+        {
+            "id":5, 
+            "title": "JQuery",
+            "body": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam recusandae voluptatum error iste quas quibusdam, nostrum eos atque nisi eveniet hic asperiores quam quos nam tempora iusto explicabo dignissimos. Sint, doloribus nemo! Explicabo ullam expedita, quia dignissimos iusto culpa, nobis iure reprehenderit quidem quod repudiandae, enim adipisci. Itaque, laudantium corporis?"
+        },
+        {
+            "id":6, 
+            "title": "Vuejs",
+            "body": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam recusandae voluptatum error iste quas quibusdam, nostrum eos atque nisi eveniet hic asperiores quam quos nam tempora iusto explicabo dignissimos. Sint, doloribus nemo! Explicabo ullam expedita, quia dignissimos iusto culpa, nobis iure reprehenderit quidem quod repudiandae, enim adipisci. Itaque, laudantium corporis?"
+        },
+        {
+            "id":7, 
+            "title": "Reactjs",
+            "body": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam recusandae voluptatum error iste quas quibusdam, nostrum eos atque nisi eveniet hic asperiores quam quos nam tempora iusto explicabo dignissimos. Sint, doloribus nemo! Explicabo ullam expedita, quia dignissimos iusto culpa, nobis iure reprehenderit quidem quod repudiandae, enim adipisci. Itaque, laudantium corporis?"
+        }
+    ]
+}
