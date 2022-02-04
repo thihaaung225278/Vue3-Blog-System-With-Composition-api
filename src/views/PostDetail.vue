@@ -40,6 +40,8 @@ import { ref } from '@vue/reactivity'
 import Spinner from '../components/Spinner'
 import getPost from "../composables/getPost"
 import { useRouter } from "vue-router"
+import {db} from "../firebase/config"
+
 export default {
   components: { Spinner },
     props:['id'],
@@ -53,12 +55,7 @@ export default {
 
         let deletePost = async() =>{
             try{
-                let res = await fetch(`http://localhost:3000/posts/${props.id}`,{
-                    method: "DELETE",
-                });
-                if(res.status === 404){
-                    throw new Error("Url Not Found Error!");
-                }
+                let res = await db.collection('posts').doc(props.id).delete();
                 router.push({name:'Home'});
             }catch(err){
                 deleteError.value = err.message;

@@ -9,7 +9,7 @@
                 </span>
             </div>
             <div class="d-grid gap-2">
-                <router-link :to="{name:'PostDetail',params:{id:post.id}}" class="btn btn-outline-success">Vue Detail for {{post.title}}</router-link>
+                <router-link :to="{name:'PostDetail',params:{id:post.id}}" class="btn btn-outline-success">View Detail Post</router-link>
             </div>
         </div>
     </div>

@@ -1,17 +1,17 @@
 import { ref } from "@vue/reactivity";
 import { resolve } from "core-js/fn/promise";
+import { db } from "../firebase/config";
+
 let getPosts = () => {
   let error = ref("");
   let posts = ref([]);
 
   let load = async () => {
     try {
-      let res = await fetch("http://localhost:3000/posts");
-      if (res.status === 404) {
-        throw new Error("Url Not Found.");
-      }
-      let data = await res.json();
-
+      let res = await db.collection("posts").get();
+      let data = res.docs.map((doc) => {
+        return { id: doc.id, ...doc.data() };
+      });
       posts.value = data;
     } catch (err) {
       error.value = err.message;

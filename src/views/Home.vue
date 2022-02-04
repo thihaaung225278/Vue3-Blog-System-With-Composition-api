@@ -1,6 +1,12 @@
 <template>
   <div v-if="error">
-    {{error}}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="text-danger">{{error}}</h3>
+        </div>
+      </div>
+    </div>
   </div>
   <div v-if="posts.length>0">
     <PostsListing :posts="posts"></PostsListing>

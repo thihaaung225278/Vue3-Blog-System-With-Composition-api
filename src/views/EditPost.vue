@@ -12,7 +12,7 @@
               </div>
               <div class="mb-3">
                 <label for="tag" class="form-label">Tags</label>
-                <input type="text" class="form-control" id="tag" v-model="tag">
+                <input type="text" class="form-control" id="tag" v-model="tag" @keydown.enter.prevent="insertTag">
                 <div>
                   <span class="badge rounded-pill bg-success me-2 mt-2" v-for="tag in tags" :key="tag">
                     <span class="custom-tag">{{tag}}</span>
@@ -42,6 +42,7 @@ import { ref } from '@vue/reactivity';
 import getPost from "../composables/getPost"
 import { onMounted } from '@vue/runtime-core';
 import { useRouter } from 'vue-router'
+import {db} from "../firebase/config"
 
 export default {
     props:["id"],
@@ -57,11 +58,8 @@ export default {
 
         let fetchData = async() =>{
             try{
-                let res = await fetch(`http://localhost:3000/posts/${props.id}`);
-                if(res.status === 404){
-                    throw new Error("URL Not Found.");
-                }
-                let data = await res.json();
+                let res = await db.collection('posts').doc(props.id).get();
+                let data = res.data();
                 title.value = data.title;
                 body.value = data.body;
                 tags.value = data.tags;
@@ -71,6 +69,13 @@ export default {
         }
         fetchData();
 
+        let insertTag = () =>{
+         if(!tags.value.includes(tag.value) && tag.value){
+           tags.value.push(tag.value);
+           tag.value = ""
+         }
+        }
+
         let clearTag = (tag) =>{
             tags.value = tags.value.filter((loopTag) =>{
                 return loopTag != tag;
@@ -78,28 +83,19 @@ export default {
         }
 
         let editPost = async() =>{
-            try{
-                let res = fetch(`http://localhost:3000/posts/${props.id}`,{
-                    method:"PATCH",
-                    headers:{
-                        "Content-Type":"application/json"
-                    },
-                    body:JSON.stringify({
-                        title: title.value,
-                        body: body.value,
-                        tags: tags.value
-                    })
-                });
-                if(res.status === 404){
-                    throw new Error("URL Not Found.");
-                }
+            try{  
+                let res = await db.collection('posts').doc(props.id).update({
+                  title: title.value,
+                  body: body.value,
+                  tags: tags.value
+                })
                 router.push({name:"Home"});
             }catch(err){
                 editError.value = err.message;
             }
         }
 
-        return {title, body, tag, tags, clearTag, editPost}
+        return {title, body, tag, tags, insertTag, clearTag, editPost}
     }
 }
 </script>
