@@ -3,6 +3,7 @@ import Home from "../views/Home.vue";
 import CreatePost from "../views/CreatePost.vue";
 import PostDetail from "../views/PostDetail.vue";
 import Tag from "../views/Tag.vue";
+import EditPost from "../views/EditPost.vue";
 
 const routes = [
   {
@@ -14,6 +15,12 @@ const routes = [
     path: "/posts/:id",
     name: "PostDetail",
     component: PostDetail,
+    props: true,
+  },
+  {
+    path: "/editPost/:id",
+    name: "EditPost",
+    component: EditPost,
     props: true,
   },
   {

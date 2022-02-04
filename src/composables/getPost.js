@@ -1,9 +1,6 @@
 import { ref } from "vue";
 
 let getPost = (id) => {
-  let error = ref("");
-  let post = ref("");
-
   let load = async () => {
     try {
       let res = await fetch(`http://localhost:3000/posts/${id}`);
@@ -16,6 +13,9 @@ let getPost = (id) => {
       error.value = err.message;
     }
   };
+
+  let error = ref("");
+  let post = ref("");
 
   return { error, post, load };
 };
