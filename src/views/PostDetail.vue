@@ -13,12 +13,12 @@
                             <p class="card-text">{{post.body}}</p>
                         </div>
                         <div class="card-footer d-flex justify-content-between">
-                            <button class="btn btn-success d-flex">
-                                <span class="mr-5">Edit</span>
+                            <button class="btn btn-outline-success d-flex">
+                                <span class="me-3"><strong>Edit</strong></span>
                                 <span class="material-icons">edit</span>
                             </button>
-                            <button class="btn btn-danger d-flex">
-                                <span>Delete</span> 
+                            <button class="btn btn-outline-danger d-flex">
+                                <span class="me-3"><strong>Delete</strong></span> 
                                 <span class="material-icons">delete</span>
                             </button>
                         </div>

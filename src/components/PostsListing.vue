@@ -2,7 +2,7 @@
   <div class="container mt-3">
     <!-- row -->
     <div class="row">
-      <div class="col-md-4" v-for="post in posts" :key="post.id">
+      <div class="col-md-4 d-flex" v-for="post in posts" :key="post.id">
         <SinglePost :post="post"></SinglePost>
       </div>
     </div>
