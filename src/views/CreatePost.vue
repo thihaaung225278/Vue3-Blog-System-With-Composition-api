@@ -44,7 +44,7 @@
 <script>
 import { ref } from '@vue/reactivity'
 import { useRouter } from "vue-router"
-import {db} from "../firebase/config"
+import {db, timestamp} from "../firebase/config"
 
 export default{
   setup(){
@@ -75,7 +75,8 @@ export default{
         let res = await db.collection('posts').add({
           title: title.value,
           body: body.value,
-          tags: tags.value
+          tags: tags.value,
+          created_at: timestamp()
         });
         
         router.push({name:"Home"});

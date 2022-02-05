@@ -42,7 +42,7 @@ import { ref } from '@vue/reactivity';
 import getPost from "../composables/getPost"
 import { onMounted } from '@vue/runtime-core';
 import { useRouter } from 'vue-router'
-import {db} from "../firebase/config"
+import {db, timestamp} from "../firebase/config"
 
 export default {
     props:["id"],
@@ -52,6 +52,7 @@ export default {
         let body = ref("");
         let tag = ref("");
         let tags = ref("");
+        // let time = ref("");
         let fetchError =ref("");
         let editError = ref("");
         let router = useRouter();
@@ -63,6 +64,7 @@ export default {
                 title.value = data.title;
                 body.value = data.body;
                 tags.value = data.tags;
+                // time.value = data.created
             }catch(err){
                 fetchError.value = err.message;
             }

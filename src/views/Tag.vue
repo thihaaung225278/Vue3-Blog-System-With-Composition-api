@@ -1,5 +1,7 @@
 <template>
+    <div>
     <PostsListing :posts="filteredPosts"></PostsListing>
+    </div>
 </template>
 
 <script>
@@ -18,8 +20,10 @@ export default {
         let filteredPosts = computed(() =>{
             return posts.value.filter((post) =>{
                 return post.tags.includes(route.params.tag);
-            });
+            });   
         });
+
+        console.log(posts);
         
         return {error, posts, filteredPosts}
     }

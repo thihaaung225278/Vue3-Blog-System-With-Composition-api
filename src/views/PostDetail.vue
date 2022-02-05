@@ -12,7 +12,11 @@
                     <div class="card border-secondary mb-3">
                         <div class="card-header text-success"><strong>{{post.title}}</strong></div>
                         <div class="card-body">
-                            <h5 class="card-title"></h5>
+                            <div>
+                                <span class="badge bg-success me-1 mb-3" v-for="tag in post.tags" :key="tag">
+                                    <router-link :to="{name:'Tag',params:{tag:tag}}" class="link-light">{{tag}}</router-link>
+                                </span>
+                            </div>
                             <p class="card-text">{{post.body}}</p>
                         </div>
                         <div class="card-footer d-flex justify-content-between">

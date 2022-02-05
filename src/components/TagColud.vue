@@ -1,9 +1,7 @@
 <template>
-    
     <li class="list-group-item list-group-item-success" v-for="tag in uniqueTag" :key="tag">
         <router-link :to="{name:'Tag',params:{tag:tag}}">{{tag}}</router-link>
     </li>
-   
 </template>
 
 <script>
@@ -12,6 +10,7 @@ import { ref } from '@vue/reactivity';
 export default {
     props:['posts'],
     setup(props){
+        
         let tags =ref([]);
 
         props.posts.forEach((post)=>{

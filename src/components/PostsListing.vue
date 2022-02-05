@@ -1,10 +1,10 @@
 <template>
   <div class="container mt-3">
     <!-- row -->
-    <div class="row">
+    <div class="row" v-if="posts.length">
       <div class="col-md-9">
         <div class="row">
-          <div class="col-md-4 d-flex" v-for="post in posts" :key="post.id">
+          <div class="col-md-6 d-flex" v-for="post in posts" :key="post.id">
             <SinglePost :post="post"></SinglePost>
           </div>
         </div>
